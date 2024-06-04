@@ -1,2 +1,32 @@
-PlatformToolSet=v143:VCToolArchitecture=Native64Bit:VCToolsVersion=14.39.33519:TargetPlatformVersion=10.0.22621.0:
-Debug|x64|C:\c++\Base\|
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{B0E84E8E-1E84-4E1C-8B5E-1F2C3F2E2F2E}</ProjectGuid>
+    <RootNamespace>Base</RootNamespace>
+    <PlatformToolset>v143</PlatformToolset>
+    <VCToolArchitecture>Native64Bit</VCToolArchitecture>
+    <VCToolsVersion>14.39.33519</VCToolsVersion>
+    <TargetPlatformVersion>10.0.22621.0</TargetPlatformVersion>
+  </PropertyGroup>
+  <ItemDefinitionGroup>
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="*.h" />
+    <ClInclude Include="*.hpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="*.cpp" />
+  </ItemGroup>
+  <PropertyGroup Label="ConfigurationProperties">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Target Name="Build">
+    <MSBuild Projects="@(ClCompile)" Targets="Compile" BuildInParallel="true" />
+    <MSBuild Projects="@(ClInclude)" Targets="Preprocess" ToolsVersion="15.0" Condition="'%(ClInclude.Identity)'!='' AND '%(ClInclude.ExcludedFromBuild)'!='true'" />
+  </Target>
+</Project>
