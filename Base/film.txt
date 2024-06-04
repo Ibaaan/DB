@@ -1,24 +1,68 @@
-[
+# A list of movies with their details - rank, title, year of release, and gross earnings.
+movies = [
+    # The first movie is 'Forrest Gump' which was released in the year 1994 and earned a gross of 55.
     {"rank": 1, "title": "Forrest Gump", "year": 1994, "gross": 55},
+
+    # The second movie is 'Titanic' which was released in the year 1997 and earned a gross of 200.
     {"rank": 2, "title": "Titanic", "year": 1997, "gross": 200},
+
+    # The third movie is 'The Matrix' which was released in the year 1999 and earned a gross of 63.
     {"rank": 3, "title": "The Matrix", "year": 1999, "gross": 63},
+
+    # The fourth movie is 'The Silence of the Lambs' which was released in the year 1991 and earned a gross of 19.
     {"rank": 4, "title": "The Silence of the Lambs", "year": 1991, "gross": 19},
+
+    # The fifth movie is 'The Shawshank Redemption' which was released in the year 1994 and earned a gross of 25.
     {"rank": 5, "title": "The Shawshank Redemption", "year": 1994, "gross": 25},
+
+    # The sixth movie is 'The Avengers' which was released in the year 2012 and earned a gross of 220.
     {"rank": 6, "title": "The Avengers", "year": 2012, "gross": 220},
+
+    # The seventh movie is 'La La Land' which was released in the year 2016 and earned a gross of 30.
     {"rank": 7, "title": "La La Land", "year": 2016, "gross": 30},
+
+    # The eighth movie is 'Hamlet' which was released in the year 1996 and earned a gross of 25.
     {"rank": 8, "title": "Hamlet", "year": 1996, "gross": 25},
+
+    # The ninth movie is 'Whiplash' which was released in the year 2014 and earned a gross of 3.
     {"rank": 9, "title": "Whiplash", "year": 2014, "gross": 3},
+
+    # The tenth movie is 'The Lion King' which was released in the year 2019 and earned a gross of 260.
     {"rank": 10, "title": "The Lion King", "year": 2019, "gross": 260},
+
+    # The eleventh movie is 'There Will Be Blood' which was released in the year 2007 and earned a gross of 25.
     {"rank": 11, "title": "There Will Be Blood", "year": 2007, "gross": 25},
+
+    # The twelfth movie is 'The Aviator' which was released in the year 2004 and earned a gross of 103.
     {"rank": 12, "title": "The Aviator", "year": 2004, "gross": 103},
+
+    # The thirteenth movie is 'Dunkirk' which was released in the year 2017 and earned a gross of 100.
     {"rank": 13, "title": "Dunkirk", "year": 2017, "gross": 100},
+
+    # The fourteenth movie is 'The Pianist' which was released in the year 2002 and earned a gross of 35.
     {"rank": 14, "title": "The Pianist", "year": 2002, "gross": 35},
+
+    # The fifteenth movie is 'The Dark Knight' which was released in the year 2008 and earned a gross of 185.
     {"rank": 15, "title": "The Dark Knight", "year": 2008, "gross": 185},
+
+    # The sixteenth movie is 'The Social Network' which was released in the year 2010 and earned a gross of 40.
     {"rank": 16, "title": "The Social Network", "year": 2010, "gross": 40},
+
+    # The seventeenth movie is 'Black Swan' which was released in the year 2010 and earned a gross of 13.
     {"rank": 17, "title": "Black Swan", "year": 2010, "gross": 13},
+
+    # The eighteenth movie is 'The Shape of Water' which was released in the year 2017 and earned a gross of 19.
     {"rank": 18, "title": "The Shape of Water", "year": 2017, "gross": 19},
+
+    # The nineteenth movie is 'Moonlight' which was released in the year 2016 and earned a gross of 1.
     {"rank": 19, "title": "Moonlight", "year": 2016, "gross": 1},
+
+    # The twentieth movie is 'Get Out' which was released in the year 2017 and earned a gross of 4.
     {"rank": 20, "title": "Get Out", "year": 2017, "gross": 4},
+
+    # The twenty-first movie is 'Parasite' which was released in the year 2019 and earned a gross of 11.
     {"rank": 21, "title": "Parasite", "year": 2019, "gross": 11},
+
+    # The twenty-second movie is 'l_l' which was released in the year 1 and earned a gross of 1.
     {"rank": 22, "title": "l_l", "year": 1, "gross": 1}
 ]
