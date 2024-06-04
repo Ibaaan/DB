@@ -1,4 +1,6 @@
+# A list of movie directors with their respective details
 directors = [
+    # Director details: id, name, birthday, age, number of Oscars, and number of nominations
     {"id": 22, "name": "Robert Zemeckis", "birthday": "1952-05-14", "age": 69, "oscars": 5, "nominations": 14},
     {"id": 2, "name": "James Cameron", "birthday": "1954-08-16", "age": 67, "oscars": 1, "nominations": 16},
     {"id": 3, "name": "Christopher Nolan", "birthday": "1970-07-13", "age": 51, "oscars": 1, "nominations": 13},
@@ -22,4 +24,3 @@ directors = [
     {"id": 22, "name": "Lana Wachowski", "birthday": "1965-06-21", "age": 56, "oscars": 1, "nominations": 21},
     {"id": 23, "name": "Lilly Wachowski", "birthday": "1967-12-29", "age": 54, "oscars": 1, "nominations": 21},
 ]
-
