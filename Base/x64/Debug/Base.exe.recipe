@@ -1,11 +1,28 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- This is an XML file representing a Visual Studio project. -->
+
+<!-- The 'Project' element is the root element of the file. -->
 <Project>
+
+  <!-- The 'ProjectOutputs' element contains a collection of project outputs. -->
   <ProjectOutputs>
+
+    <!-- Each 'ProjectOutput' element represents a single output of the project. -->
     <ProjectOutput>
+
+      <!-- The 'FullPath' element specifies the full path of the output file. -->
       <FullPath>C:\c++\Base\x64\Debug\Base.exe</FullPath>
+
     </ProjectOutput>
+
   </ProjectOutputs>
+
+  <!-- The 'ContentFiles' element is currently empty and can be used to store content files. -->
   <ContentFiles />
+
+  <!-- The 'SatelliteDlls' element is currently empty and can be used to store satellite DLLs. -->
   <SatelliteDlls />
+
+  <!-- The 'NonRecipeFileRefs' element is currently empty and can be used to store non-recipe file references. -->
   <NonRecipeFileRefs />
+
 </Project>
