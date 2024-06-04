@@ -1,2 +1,17 @@
-C:\c++\Base\Base\Base.cpp;C:\c++\Base\Base\x64\Debug\Base.obj
-C:\c++\Base\Base\main.cpp;C:\c++\Base\Base\x64\Debug\main.obj
+#include "stdafx.h"                                                         // 1
+#include <iostream>                                                          // 2
+using namespace std;                                                          // 3
+                                                                             // 4
+class Base                                                                   // 5
+{                                                                            // 6
+public:                                                                       // 7
+    Base() { cout << "Base constructor called" << endl; }                    // 8
+    virtual ~Base() { cout << "Base destructor called" << endl; }              // 9
+};                                                                           //10
+                                                                             //11
+int main()                                                                   //12
+{                                                                            //13
+    Base b;                                                                   //14
+    return 0;                                                                 //15
+}                                                                            //16
+
