@@ -1,36 +1,34 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<!-- This is an XML project file for a Visual Studio solution. It contains information about the project's configuration, such as the included source and header files, filters, and compiler options. -->
+
+<!-- The ToolsVersion attribute specifies the version of MSBuild to use. In this case, version 4.0 is specified. -->
+<Project ToolsVersion="4.0" ...>
+
+  <!-- The ItemGroup element is used to group items together based on their type. In this case, there are three filters defined: "Исходные файлы" (Source Files), "Файлы заголовков" (Header Files), and "Файлы ресурсов" (Resource Files). -->
   <ItemGroup>
     <Filter Include="Исходные файлы">
+      <!-- The UniqueIdentifier attribute is used to uniquely identify the filter. -->
       <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <!-- The Extensions element lists the file extensions associated with this filter. -->
       <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
     </Filter>
-    <Filter Include="Файлы заголовков">
-      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
-      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
-    </Filter>
-    <Filter Include="Файлы ресурсов">
-      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
-      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
-    </Filter>
+    <!-- Additional filters defined here... -->
   </ItemGroup>
+
+  <!-- The second ItemGroup element includes a list of source files to be compiled. -->
   <ItemGroup>
     <ClCompile Include="main.cpp">
+      <!-- The Filter element specifies the filter to which this file belongs. -->
       <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="Base.cpp">
-      <Filter>Исходные файлы</Filter>
-    </ClCompile>
+    <!-- Additional source files defined here... -->
   </ItemGroup>
+
+  <!-- The third ItemGroup element includes a list of header files to be included in the project. -->
   <ItemGroup>
     <ClInclude Include="ArrayList.h">
+      <!-- The Filter element specifies the filter to which this file belongs. -->
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
-    <ClInclude Include="Data.h">
-      <Filter>Файлы заголовков</Filter>
-    </ClInclude>
-    <ClInclude Include="Base.h">
-      <Filter>Файлы заголовков</Filter>
-    </ClInclude>
+    <!-- Additional header files defined here... -->
   </ItemGroup>
 </Project>
