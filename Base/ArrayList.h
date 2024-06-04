@@ -1,6 +1,7 @@
 #pragma once
 #include <iostream>
-
+#include <memory>
+#include <initializer_list>
 
 template<typename T>
 struct Node {
@@ -14,44 +15,30 @@ struct Node {
 template <typename T>
 class ArrayList {
 private:
-
-	Node<T>* mainList;
+	std::unique_ptr<Node<T>[]> mainList;
 	int size = 10, ip = 0;
-	const double RESIZE_TRESHHOLD = 0.89;
+	const double RESIZE_THRESHOLD = 0.89;
 
 public:
-	ArrayList() : mainList(nullptr) {
-		mainList = new Node<T>[size];
-	}
+	ArrayList(int capacity = 10) : mainList(std::make_unique<Node<T>[]>(capacity)), size(capacity) {}
 
-	~ArrayList() {
-		delete[] mainList;
-	}
-
-	ArrayList(const ArrayList& other) : mainList(nullptr) {
-		size = other.size;
+	ArrayList(const ArrayList& other) : ArrayList(other.size) {
+		std::copy(other.mainList.get(), other.mainList.get() + other.ip, mainList.get());
 		ip = other.ip;
-		mainList = new Node<T>[size];
-		for (int i = 0; i < ip; i++) {
-			mainList[i] = other.mainList[i];
-		}
 	}
 
-	ArrayList& operator=(const ArrayList& other) {
-		if (this != &other) {
-			delete[] mainList;
-			size = other.size;
-			ip = other.ip;
-			mainList = new Node<T>[size];
-			for (int i = 0; i < ip; i++) {
-				mainList[i] = other.mainList[i];
-			}
-		}
+	ArrayList(ArrayList&& other) noexcept : mainList(std::move(other.mainList)), size(other.size), ip(other.ip) {
+		other.size = 0;
+		other.ip = 0;
+	}
+
+	ArrayList& operator=(ArrayList other) {
+		swap(*this, other);
 		return *this;
 	}
 
 	void push(const T& data) {
-		if (((double)(ip + 1) / size) > RESIZE_TRESHHOLD) {
+		if (((double)(ip + 1) / size) > RESIZE_THRESHOLD) {
 			resize();
 		}
 		mainList[ip].data = data;
@@ -59,15 +46,20 @@ public:
 		ip++;
 	}
 
+	void emplace(T&& data) {
+		if (((double)(ip + 1) / size) > RESIZE_THRESHOLD) {
+			resize();
+		}
+		mainList[ip].data = std::move(data);
+		mainList[ip].id = ip;
+		ip++;
+	}
+
 	void resize() {
 		size *= 2;
-		Node<T>* newList = new Node<T>[size];
-		for (int i = 0; i < ip; i++) {
-			newList[i] = mainList[i];
-		}
-		delete[] mainList;
-		mainList = newList;
-		return;
+		auto newList = std::make_unique<Node<T>[]>(size);
+		std::copy(mainList.get(), mainList.get() + ip, newList.get());
+		mainList = std::move(newList);
 	}
 
 	void del(int index) {
@@ -75,42 +67,47 @@ public:
 			std::cout << "Wrong index del" << std::endl;
 			return;
 		}
-		Node<T>* newList = new Node<T>[size];
-		int j = 0;
-		for (int i = 0; i < ip; i++) {
-			if (i == index) {
-				continue;
-			}
-			newList[j] = mainList[i];
-			newList[j].id = j;
-			j++;
+		for (int i = index; i < ip - 1; i++) {
+			mainList[i] = mainList[i + 1];
+			mainList[i].id = i;
 		}
 		ip--;
-		delete[] mainList;
-		mainList = newList;
-		return;
 	}
 
-	int getSize() {
+	int getSize() const {
 		return ip;
 	}
 
-	T get(int i) {
+	T get(int i) const {
 		if (i >= 0 && i < ip) {
 			return mainList[i].data;
 		}
-		return Node<T>().data;
+		throw std::out_of_range("Index out of range");
+	}
+
+	T& at(int i) {
+		if (i >= 0 && i < ip) {
+			return mainList[i].data;
+		}
+		throw std::out_of_range("Index out of range");
+	}
+
+	const T& at(int i) const {
+		if (i >= 0 && i < ip) {
+			return mainList[i].data;
+		}
+		throw std::out_of_range("Index out of range");
 	}
 
 	void set(const T& data, int i) {
 		mainList[i].data = data;
 	}
 
-	bool isEmpty() {
+	bool isEmpty() const {
 		return getSize() == 0;
 	}
 
-	bool contains(const T& data) {
+	bool contains(const T& data) const {
 		for (int i = 0; i < getSize(); i++) {
 			if (data == mainList[i].data) {
 				return true;
@@ -119,13 +116,26 @@ public:
 		return false;
 	}
 
-	//void finalResize() {
-	//	Node<T>* newList = new Node<T>[ip];
-	//	for (int i = 0; i < ip; i++) {
-	//		newList[i] = mainList[i];
-	//	}
-	//	mainList = newList;
-	//	size = ip;
-	//	return;
-	//}
+	T& operator[](int i) {
+		return mainList[i].data;
+	}
+
+	const T& operator[](int i) const {
+		return mainList[i].data;
+	}
+
+	auto begin() {
+		return std::make_move_iterator(mainList.get());
+	}
+
+	auto end() {
+		return std::make_move_iterator(mainList.get() + ip);
+	}
+
+	friend void swap(ArrayList& first, ArrayList& second) noexcept {
+		using std::swap;
+		swap(first.mainList, second.mainList);
+		swap(first.size, second.size);
+		swap(first.ip, second.ip);
+	}
 };
