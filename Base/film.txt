@@ -1,23 +1,24 @@
-22
-1 Forrest_Gump 1994 55 
-2 Titanic 1997 200 
-3 The_Matrix 1999 63 
-4 The_Silence_of_the_Lambs 1991 19 
-5 The_Shawshank_Redemption 1994 25 
-6 The_Avengers 2012 220 
-7 La_La_Land 2016 30 
-8 Hamlet 1996 25 
-9 Whiplash 2014 3 
-10 The_Lion_King 2019 260 
-11 There_Will_Be_Blood 2007 25 
-12 The_Aviator 2004 103 
-13 Dunkirk 2017 100 
-14 The_Pianist 2002 35 
-15 The_Dark_Knight 2008 185 
-16 The_Social_Network 2010 40 
-17 Black_Swan 2010 13 
-18 The_Shape_of_Water 2017 19 
-19 Moonlight 2016 1 
-20 Get_Out 2017 4 
-21 Parasite 2019 11 
-22 l_l 1 1 
+[
+    {"rank": 1, "title": "Forrest Gump", "year": 1994, "gross": 55},
+    {"rank": 2, "title": "Titanic", "year": 1997, "gross": 200},
+    {"rank": 3, "title": "The Matrix", "year": 1999, "gross": 63},
+    {"rank": 4, "title": "The Silence of the Lambs", "year": 1991, "gross": 19},
+    {"rank": 5, "title": "The Shawshank Redemption", "year": 1994, "gross": 25},
+    {"rank": 6, "title": "The Avengers", "year": 2012, "gross": 220},
+    {"rank": 7, "title": "La La Land", "year": 2016, "gross": 30},
+    {"rank": 8, "title": "Hamlet", "year": 1996, "gross": 25},
+    {"rank": 9, "title": "Whiplash", "year": 2014, "gross": 3},
+    {"rank": 10, "title": "The Lion King", "year": 2019, "gross": 260},
+    {"rank": 11, "title": "There Will Be Blood", "year": 2007, "gross": 25},
+    {"rank": 12, "title": "The Aviator", "year": 2004, "gross": 103},
+    {"rank": 13, "title": "Dunkirk", "year": 2017, "gross": 100},
+    {"rank": 14, "title": "The Pianist", "year": 2002, "gross": 35},
+    {"rank": 15, "title": "The Dark Knight", "year": 2008, "gross": 185},
+    {"rank": 16, "title": "The Social Network", "year": 2010, "gross": 40},
+    {"rank": 17, "title": "Black Swan", "year": 2010, "gross": 13},
+    {"rank": 18, "title": "The Shape of Water", "year": 2017, "gross": 19},
+    {"rank": 19, "title": "Moonlight", "year": 2016, "gross": 1},
+    {"rank": 20, "title": "Get Out", "year": 2017, "gross": 4},
+    {"rank": 21, "title": "Parasite", "year": 2019, "gross": 11},
+    {"rank": 22, "title": "l_l", "year": 1, "gross": 1}
+]
