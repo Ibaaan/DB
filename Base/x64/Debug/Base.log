@@ -1,32 +1,36 @@
-#ifndef BASE_H
+#ifndef BASE_H // Include guard to prevent multiple inclusions of this header file
 #define BASE_H
 
-class Base {
-public:
-    Base();
-    ~Base();
-    void someFunction();
+class Base { // Class definition for the Base class
+public: // Public interface for the class
+    Base(); // Constructor declaration
+    ~Base(); // Destructor declaration
+    void someFunction(); // Declaration of someFunction member
 };
 
 #endif // !BASE_H
 
 
-#include "Base.h"
-#include <iostream>
+#include "Base.h" // Include the Base header file
+#include <iostream> // Include the iostream library to use cout
 
+// Constructor implementation
 Base::Base() {
     std::cout << "Base constructor called." << std::endl;
 }
 
+// Destructor implementation
 Base::~Base() {
     std::cout << "Base destructor called." << std::endl;
 }
 
+// Implementation of someFunction member
 void Base::someFunction() {
     std::cout << "Some function of Base class called." << std::endl;
 }
 
-
+// CMake configuration for the Base project
 cmake_minimum_required(VERSION 3.10)
 project(Base)
-add_library(Base STATIC Base.cpp)
+add_library(Base STATIC Base.cpp) // Create a static library named Base from Base.cpp
+
