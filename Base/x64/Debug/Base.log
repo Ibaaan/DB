@@ -1,2 +1,32 @@
-﻿  Base.cpp
-  Base.vcxproj -> C:\c++\Base\x64\Debug\Base.exe
+#ifndef BASE_H
+#define BASE_H
+
+class Base {
+public:
+    Base();
+    ~Base();
+    void someFunction();
+};
+
+#endif // !BASE_H
+
+
+#include "Base.h"
+#include <iostream>
+
+Base::Base() {
+    std::cout << "Base constructor called." << std::endl;
+}
+
+Base::~Base() {
+    std::cout << "Base destructor called." << std::endl;
+}
+
+void Base::someFunction() {
+    std::cout << "Some function of Base class called." << std::endl;
+}
+
+
+cmake_minimum_required(VERSION 3.10)
+project(Base)
+add_library(Base STATIC Base.cpp)
