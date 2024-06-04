@@ -1,0 +1,23 @@
+21
+1 Tom Hanks 9 8 1956 4 
+2 Leonardo DiCaprio 11 11 1974 4 
+3 Julia Roberts 28 10 1967 0 
+4 Denzel Washington 28 12 1954 1 
+5 Meryl Streep 22 6 1949 1 
+6 Chris Hemsworth 11 8 1983 1 
+7 Emma Stone 6 11 1988 1 
+8 Ryan Gosling 12 11 1980 2 
+9 Scarlett Johansson 22 11 1984 1 
+10 Idris Elba 6 9 1972 1 
+11 Daniel Day-Lewis 29 4 1957 3 
+12 Cate Blanchett 14 5 1969 2 
+13 Brad Pitt 18 12 1963 4 
+14 Natalie Portman 9 6 1981 3 
+15 Christian Bale 30 1 1974 4 
+16 Jennifer Lawrence 15 8 1990 3 
+17 Lupita Nyong'o 1 3 1983 2 
+18 Viola Davis 11 8 1965 2 
+19 Mahershala Ali 16 2 1974 3 
+20 Amy Adams 20 8 1974 4 
+21 Keanu Reeves 2 9 1964 1 
+

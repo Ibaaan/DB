@@ -1,0 +1,24 @@
+22
+1 Robert Zemeckis 14 5 1952 2 
+2 James Cameron 16 8 1954 1 
+3 Christopher Nolan 13 7 1970 1 
+4 Quentin Tarantino 27 3 1963 1 
+5 Jonathan Demme 22 2 1944 1 
+7 Steven Spielberg 18 12 1946 1 
+8 Kenneth Branagh 10 12 1960 1 
+9 Damien Chazelle 19 1 1985 1 
+10 Nicolas Winding 29 9 1970 1 
+11 Jon Favreau 19 10 1966 1 
+12 Martin Scorsese 17 11 1942 1 
+13 Kathryn Bigelow 27 11 1951 0 
+14 Guillermo del-Toro 9 10 1964 1 
+15 Alfonso Cuarón 28 11 1961 1 
+16 Spike Lee 20 3 1957 1 
+17 Greta Gerwig 4 8 1983 1 
+18 Jordan Peele 21 2 1979 1 
+19 Bong Joon-ho 14 9 1969 1 
+20 Taika Waititi 16 8 1975 1 
+21 Barry Jenkins 19 11 1979 1 
+22 Laurence Wachowski 21 6 1965 1 
+23 Lilly Wachowski 29 12 1967 1 
+
