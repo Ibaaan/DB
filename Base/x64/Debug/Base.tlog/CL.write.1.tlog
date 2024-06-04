@@ -1,30 +1,27 @@
-#include <iostream>
-#include "base.h"
+#include <iostream> // Include statement for the iostream library, which allows for input/output operations
+#include "base.h"   // Include statement for the base header file, which contains the definition for the Base class
 
 int main() {
-    Base myBase;
-    myBase.doSomething();
-    return 0;
+    Base myBase;   // Create an instance of the Base class called myBase
+    myBase.doSomething();  // Call the doSomething() method on myBase
+    return 0;              // Return 0 to indicate that the program has executed successfully
 }
 
-
-#ifndef BASE_H
+#ifndef BASE_H  // Begin include guard to prevent multiple inclusions of the same header file
 #define BASE_H
 
-class Base {
-public:
-    void doSomething();
-};
+class Base { // Begin definition of the Base class
+public:    // Begin public section of the class
+    void doSomething(); // Declare a public method called doSomething()
+};        // End definition of the Base class
 
-#endif // BASE_H
+#endif // End include guard
 
-
-#include "base.h"
-
+// Begin definition of the doSomething() method for the Base class
 void Base::doSomething() {
     // implementation here
 }
 
-
-g++ -o myProgram main.cpp base.cpp
-./myProgram
+// Compile and run the program using the following commands:
+// g++ -o myProgram main.cpp base.cpp   // Compile the main.cpp and base.cpp files and create an executable file called myProgram
+// ./myProgram                       // Run the myProgram executable
