@@ -1,5 +1,7 @@
-// MAIN.CPP
-#include "BASE.h"
+// main.cpp
+// ---------
+// This is the entry point of the application.
+// The main function initializes and runs the program.
 
 int main()
 {
@@ -8,12 +10,18 @@ int main()
 
 
 // BASE.h
+// ------
+// This header file contains the declarations for the base class or functions.
+
 #pragma once
 
 // Your class or function declarations
 
 
 // BASE.cpp
+// --------
+// This source file contains the definitions for the base class or functions.
+
 #include "BASE.h"
 
 // Your class or function definitions
